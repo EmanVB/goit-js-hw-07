@@ -21,11 +21,7 @@ galleryItems.forEach((imgs) => {
     gallery.innerHTML += li;
 });
 
-gallery.addEventListener("click", (e) => {
-    console.log ("You clicked an image!");
-    if(e.target.tagName === "IMG"){
-        console.log (e.target);
-         let resultImg = new SimpleLightbox(".gallery a", {captionsData: alt});
-         resultImg.on ("show.simplelightbox");    
-        }
-});
+
+const resultImg = new SimpleLightbox(".gallery a", {captionsData: "alt", captionDelay: 250});
+resultImg.on("show.simplelightbox");    
+    
